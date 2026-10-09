@@ -1,0 +1,19 @@
+# virtual environment
+.venv/
+venv/
+env/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# editors / os
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# app local data
+notes.txt
