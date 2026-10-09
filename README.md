@@ -82,7 +82,21 @@ Then simply **double-click `setup.bat`**. It automatically:
 
 Done — double-click the **Q-Tools** desktop icon to launch.
 
-### 🖥 Method 2 — Terminal (manual, Windows PowerShell / CMD)
+### 🍎🐧 Method 2 — One-click `setup.sh` (macOS / Linux)
+
+Open Terminal and run:
+
+```bash
+git clone https://github.com/codersachin18/q-tools.git
+cd q-tools
+bash setup.sh
+```
+
+The setup script creates a `.venv`, installs the requirements, generates the app icon, and adds a **Q-Tools** launcher to your Desktop. On macOS it creates `Q-Tools.app`; on Linux it creates a `.desktop` launcher. Double-click the launcher when setup finishes.
+
+> **Linux:** If setup reports that it cannot create the virtual environment, install `python3-venv` with your distribution's package manager and run `bash setup.sh` again.
+
+### 🖥 Method 3 — Terminal (manual)
 
 ```powershell
 git clone https://github.com/codersachin18/q-tools.git
@@ -110,9 +124,9 @@ python3 app.py
 ```
 </details>
 
-### 📦 Method 3 — `start.bat`
+### 📦 Method 4 — Quick launch
 
-Already installed once? Just **double-click `start.bat`** — it launches the app from the venv with no console window.
+Already installed once? On Windows, **double-click `start.bat`**. On macOS/Linux, double-click the Q-Tools Desktop launcher or run `./start.sh` from the project folder.
 
 ---
 
@@ -136,6 +150,8 @@ q-tools/
 ├── app.py               # entry point: sidebar + dashboard + router
 ├── setup.bat            # one-time installer + desktop shortcut
 ├── start.bat            # quick launcher
+├── setup.sh             # macOS/Linux installer + desktop launcher
+├── start.sh             # macOS/Linux quick launcher
 ├── requirements.txt
 ├── assets/              # icon + screenshots
 ├── tools/               # every tool auto-discovered from here
