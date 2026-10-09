@@ -62,10 +62,12 @@ def main():
     _centered_text(draw, (size // 2, size // 2 + 4), "Q",
                    _font(int(size * 0.60)), (255, 255, 255, 255))
 
-    out = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                       "qtools.ico")
-    img.save(out, format="ICO", sizes=[(s, s) for s in SIZES])
-    print(f"icon written: {out}")
+    here = os.path.dirname(os.path.abspath(__file__))
+    ico = os.path.join(here, "qtools.ico")
+    img.save(ico, format="ICO", sizes=[(s, s) for s in SIZES])
+    png = os.path.join(here, "qtools.png")
+    img.save(png, format="PNG")            # used by the Linux .desktop file
+    print(f"icons written: {ico}, {png}")
     return 0
 
 
